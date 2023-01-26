@@ -1,21 +1,19 @@
 import React from 'react';
 import Email from './email';
+import Phone from './phone';
 
 
 const Customer = (props) => {
-    const {firstName, lastName, id} = props.data;
+    const {firstName, lastName, id, id2} = props.data;
 
     return (
-        <ul><li>
+        <li>
         Prénom : {firstName} 
-        </li>
-        <li>
         Nom: {lastName} 
-        </li>
-        <li>
         <Email data={props.data} key={id}/>
+        <Phone data={props.data} key={id2}/>
         </li>
-        </ul>
+
         
     );
 };
